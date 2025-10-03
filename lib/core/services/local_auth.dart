@@ -1,5 +1,4 @@
 import 'package:flutter/services.dart';
-import 'package:local_auth/auth_strings.dart';
 import 'package:local_auth/local_auth.dart';
 
 class LocalAuthApi {
@@ -20,12 +19,11 @@ class LocalAuthApi {
 
     try {
       return await _auth.authenticate(
-        androidAuthStrings: AndroidAuthMessages(
-          signInTitle: 'Face ID Required',
-        ),
         localizedReason: 'Scan Face to Authenticate',
-        useErrorDialogs: false,
-        stickyAuth: false,
+        options: const AuthenticationOptions(
+          useErrorDialogs: false,
+          stickyAuth: false,
+        ),
       );
     } on PlatformException catch (e) {
       print(e);

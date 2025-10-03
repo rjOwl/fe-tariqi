@@ -151,13 +151,13 @@ class CustomTextFieldWidget extends StatelessWidget {
   const CustomTextFieldWidget(
       {Key? key,
       required this.controller,
-      this.hintText: 'A Text is missing HERE!',
+      this.hintText = 'A Text is missing HERE!',
       this.keyboardType,
       this.autofill,
       this.prefixWidget,
-      this.hideText: false,
+      this.hideText = false,
       this.suffixWidget,
-      this.fillcolour: ColorPath.Primaryfield,
+      this.fillcolour = ColorPath.Primaryfield,
       this.onChanged})
       : super(key: key);
 
@@ -218,7 +218,7 @@ class CustomDropdown extends StatelessWidget {
     this.dropdownValue,
     required this.items,
     this.onChanged,
-    this.backgroundColour: ColorPath.Primarywhite,
+    this.backgroundColour = ColorPath.Primarywhite,
   }) : super(key: key);
 
   @override

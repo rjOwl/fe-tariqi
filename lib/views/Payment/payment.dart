@@ -242,7 +242,7 @@ class CustomAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-        brightness: Brightness.dark,
+        systemOverlayStyle: SystemUiOverlayStyle.light,
         backgroundColor: ColorPath.Primarydark,
         automaticallyImplyLeading: false,
         centerTitle: true,
@@ -275,7 +275,6 @@ class CustomAppBar extends StatelessWidget {
               )),
             ),
           ),
-        ),
-        systemOverlayStyle: SystemUiOverlayStyle.light);
+        ));
   }
 }
